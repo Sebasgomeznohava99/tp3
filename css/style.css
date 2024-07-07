@@ -1,128 +1,111 @@
-* {
-  margin: 0;
-  box-sizing: border-box;
+body {
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+.dark-mode .main .catalog-grid div {
+  background-color: #1e1e1e;
+  border-color: #ffffff;
+}
+.dark-mode footer .footer-links ul li a {
+  color: white;
+}
+.dark-mode footer .redes-sociales div a i {
+  color: white;
 }
 
 .navbar-color {
   background-color: rgba(16, 139, 0, 0.701);
 }
 
-h1 {
+.title {
   text-align: center;
-  padding: 10px;
+  margin: 20px 0;
 }
 
-h2 {
-  text-align: center;
-  padding: 10px;
+head {
+  background-color: #f0f0f0;
+  padding: 20px;
 }
 
-h5 {
-  text-align: center;
-  padding: 10px;
+main {
+  padding: 20px;
 }
-
-section h2 {
-  margin-top: 50px;
-}
-
-.catalog-grid {
-  margin: 50px 0px;
+main .catalog-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
 }
-.catalog-grid div {
+main .catalog-grid div {
+  text-align: center;
+  border: 4px solid rgba(0, 0, 0, 0.737254902);
+  padding: 10px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  width: 500px;
-  height: 550px;
-  border: solid 5px black;
-  margin-top: 10px;
+  align-items: center;
+  justify-content: space-between;
   border-radius: 20px;
 }
-.catalog-grid div .img-libro {
-  width: 250px;
-  height: 400px;
-  margin-top: 20px;
-  border-radius: 20px;
-  border: solid 10px rgba(2, 101, 65, 0.953);
-  transform: translateZ(0px);
-  transition: all 0.5s ease;
+main .catalog-grid .img-libro {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
 }
-.catalog-grid div .img-libro:hover {
-  transform: translateX(2px) translateY(-10px) translateZ(20px);
-  box-shadow: 5px 15px 10px;
-}
-.catalog-grid div p {
-  margin-top: 5px;
-  font-size: 25px;
-}
-.catalog-grid div button {
-  width: 50px;
-  height: 50px;
-  border-radius: 10px;
-  background-color: beige;
-  transform: translateZ(0px);
-  transition: all 0.5s ease;
-}
-.catalog-grid div button:hover {
-  transform: translateX(2px) translateY(-5px) translateZ(20px);
-  box-shadow: 5px 10px 20px;
-}
-.catalog-grid div button .img-button {
-  height: 35px;
-  width: 30px;
+main .catalog-grid .add-to-cart img {
+  width: 20px;
+  height: 20px;
 }
 
 footer {
   background-color: rgba(16, 139, 0, 0.701);
   display: flex;
   justify-content: space-around;
+  padding: 40px;
 }
-footer .footer-links {
-  margin-top: 20px;
+
+.footer-links ul {
+  list-style-type: none;
+  padding: 0;
 }
-footer .footer-links ul li {
+
+.footer-links li {
   margin: 10px;
 }
-footer .footer-links ul li a {
+
+.footer-links a {
   text-decoration: none;
   color: black;
+  font-weight: bold;
 }
-footer .redes-sociales {
-  margin-top: 20px;
+
+.redes-sociales {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 300px;
 }
-footer .redes-sociales div a {
+
+.redes-sociales a {
   text-decoration: none;
   color: black;
 }
-footer .redes-sociales div a i {
+
+.redes-sociales i {
   font-size: 100px;
 }
-footer .redes-sociales div a {
-  text-decoration: none;
-  color: black;
-}
-footer .redes-sociales div a .bi-instagram {
+
+.bi-instagram {
   font-size: 85px;
 }
-footer .copyright {
-  margin-top: 20px;
-}
-footer .copyright p {
-  margin: 5px;
+
+.copyright {
+  text-align: center;
   font-weight: bold;
+  margin: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

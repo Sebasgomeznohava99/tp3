@@ -21,10 +21,10 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Books</a>
+                        <a class="nav-link" href="./pages/books.html">Books</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Orders</a>
+                        <a class="nav-link" href="./pages/orders.html">Orders</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -38,13 +38,13 @@
             </div>
         </div>
     </nav>
-    <section class="title">
+    <section class="title-section" id="title">
         <h1>Bienvenidos</h1>
         <h2>A esta su página, Nohavá</h2>
         <h5>Donde puede ordenar todo tipo de libros y los que no los encuentres en nuestra página los puedes ordenar y llegan a la puerta de tu casa</h5>
     </section>
-    <main>
-        <button id="toggle-dark-mode">Toggle Dark Mode</button>
+    <main class="main">
+        <button class="dark-mode-toggle" id="toggle-dark-mode">Modo Oscuro</button>
         <section>
             <h2>Best Sellers</h2>
         </section>
@@ -66,7 +66,7 @@
             </div>
             <div>
                 <img class="img-libro" src="./img/the_orphanage_by_the_lake.jpg" alt="the orphanage by the lake">
-                <p>The Orphanage Bu The Lake</p>
+                <p>The Orphanage By The Lake</p>
                 <button class="add-to-cart"><img class="img-button" src="./img/add_to_cart.png" alt=""></button>
             </div>
             <div>
@@ -80,8 +80,9 @@
                 <button class="add-to-cart"><img class="img-button" src="./img/add_to_cart.png" alt=""></button>
             </div>
         </section>
+        <section id="cart-container"></section>
     </main>
-    <footer>
+    <footer class="footer">
         <section class="footer-links">
             <ul>
                 <li><a href="#">Home</a></li>
@@ -109,4 +110,9 @@
             <p>2024</p>
         </section>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

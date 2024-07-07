@@ -1,7 +1,36 @@
-* {
-    margin: 0;
-    box-sizing: border-box;
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
 }
-body{
-    font-family: Arial, Helvetica, sans-serif;
+
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+
+    .main {
+        .catalog-grid div {
+            background-color: #1e1e1e;
+            border-color: #ffffff;
+        }
+    }
+    footer{
+        .footer-links{
+            ul{
+                li{
+                    a{
+                        color: white;
+                    }
+                }
+            }
+        }
+        .redes-sociales{
+            div{
+                a{
+                    i{
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
 }

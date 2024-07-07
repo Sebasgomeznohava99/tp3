@@ -1,36 +1,26 @@
-function toggleDarkMode() {
-    document.body.classList.toggle('dark-mode');
-    if (document.body.classList.contains('dark-mode')) {
-        localStorage.setItem('darkMode', 'enabled');
+const darkModeButton = document.querySelector("#toggle-dark-mode");
+const body = document.body
+let darkMode = localStorage.getItem("dark-mode");
+
+function activarDarkMode(){
+    body.classList.add("dark-mode");
+    localStorage.setItem("dark-mode", "activado")
+}
+function desactivarDarkMode(){
+    body.classList.remove("dark-mode");
+    localStorage.setItem("dark-mode", "desactivado")
+}
+if(darkMode === "activado"){
+    activarDarkMode()
+} else {
+    desactivarDarkMode()
+}
+darkModeButton.addEventListener("click", () =>{
+    darkMode = localStorage.getItem("dark-mode");
+    if(darkMode === "activado"){
+        desactivarDarkMode();
     } else {
-        localStorage.setItem('darkMode', 'disabled');
+        activarDarkMode()
     }
-}
+})
 
-
-document.addEventListener('DOMContentLoaded', function() {
-    if (localStorage.getItem('darkMode') === 'enabled') {
-        document.body.classList.add('dark-mode');
-    }
-
-
-    let buttons = document.querySelectorAll('.add-to-cart');
-    buttons.forEach(function(button) {
-        button.addEventListener('click', function() {
-            let bookTitle = this.previousElementSibling.textContent;
-            addToCart(bookTitle);
-        });
-    });
-});
-
-
-function addToCart(bookTitle) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    cart.push(bookTitle);
-    localStorage.setItem('cart', JSON.stringify(cart));
-    alert(bookTitle + ' se ha agregado al carrito.');
-}
-
-
-let darkModeButton = document.getElementById('toggle-dark-mode');
-darkModeButton.addEventListener('click', toggleDarkMode);
